@@ -6,7 +6,7 @@ function Home( {data, setdata}) {
   return (
     <>
     <Herohomesections data={data}  setdata={setdata} />
-    <Homesection data={data}   />
+    <Homesection data={data} setdata={setdata}  />
     
     
     </>

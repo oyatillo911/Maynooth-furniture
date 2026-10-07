@@ -51,32 +51,36 @@ function Herohomesections({ data, setdata }) {
                 }} >
                   <div className="input flex items-center gap-[10px]  ">
                     <label className='capitalize w-[40px]' >img:</label>
-                    <input onInput={(e) => {
+                    <input required onInput={(e) => {
                       setimg(e.target.value)
                     }} placeholder='Img' className=' rounded-[4px] outline-none pl-[10px]  bg-white  w-[90%] h-[45px] ' type="text" />
                   </div>
                   <div className="input flex items-center gap-[10px]  ">
                     <label className='capitalize w-[40px]' >title:</label>
-                    <input onInput={(e) => {
+                    <input required onInput={(e) => {
                       settitle(e.target.value)
                     }} placeholder='Title' className=' rounded-[4px] outline-none pl-[10px]  bg-white  w-[90%] h-[45px] ' type="text" />
                   </div>
                   <div className="input flex items-center gap-[10px]  ">
                     <label className='capitalize w-[40px]' >price:</label>
-                    <input onInput={(e) => {
+                    <input required onInput={(e) => {
                       setprice(e.target.value)
                     }} placeholder='Price' className=' rounded-[4px] outline-none pl-[10px]  bg-white  w-[90%] h-[45px]' type="number" />
                   </div>
                   <div className="input flex items-center gap-[10px]  ">
                     <label className='capitalize w-[40px]' >desc:</label>
-                    <input onInput={(e) => {
+                    <input required onInput={(e) => {
                       setdeck(e.target.value)
                     }} placeholder='Desc' className=' rounded-[4px] outline-none pl-[10px]  bg-white  w-[90%] h-[45px] ' type="text" />
                   </div>
-                  <div className="btn pt-[40px] " >
+                  <div className="btn pt-[40px] flex items-center justify-between " >
+                  <button  onClick={()=>{
+                    setmodal(false)
+                  }} className=' transition-all duration-300 ease-in-out  border w-[150px]  h-[40px]  cursor-pointer rounded-[5px] text-gray-600 text-center hover:bg-red-600 hover:text-white ' type='button' >Cancel</button>
                     <button type='submit' onClick={() => {
 
-                    }} className='border w-[150px]  h-[40px] cursor-pointer rounded-[5px] text-gray-600 text-center ' >Add</button>
+                    }} className=' transition-all duration-300 ease-in-out border w-[150px]  h-[40px] cursor-pointer rounded-[5px] text-gray-600 text-center hover:bg-green-600 hover:text-white ' >Add</button>
+                    
                   </div>
 
                 </form>

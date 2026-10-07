@@ -12,7 +12,7 @@ function Detail({data}) {
       <section>
         <div className="container mx-auto w-[1200px] pb-[105px] ">
           <div className="info pt-[80px] pb-[45px] ">
-            <h2 className='font-bold  text-[16px]  text-[#000000]' >{filterInfo.title} </h2>
+            <h2 className='font-bold capitalize text-[16px]  text-[#000000]' >{filterInfo.title} </h2>
           </div>
           <div className="box flex items-start justify-between">
             <div className="logo flex flex-col gap-[20px] w-[730px]">
