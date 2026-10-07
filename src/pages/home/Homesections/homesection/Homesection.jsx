@@ -8,8 +8,8 @@ function Homesection({ data }) {
                 <div className="container  w-[1200px] mx-auto ">
                     <div className="one_box flex items-center  flex-wrap  py-[70px] gap-[48px] ">
                         {
-                            data.map((item, i) => {
-                                return <Link to={`/detail/${item.id}`} className="one_cards w-[22%] border-b pb-[25px]  " key={i}>
+                            data?.map((item, i) => {
+                                return <div className="one_cards w-[22%] border-b pb-[25px]  " key={i}>
                                     <div className="logo">
                                         <img src={item.img} alt="" />
                                     </div>
@@ -30,10 +30,10 @@ function Homesection({ data }) {
                                             <span className='font-normal  text-[12px] text-[#535353]' >(267)</span>
                                         </div>
                                         <div className="btn  flex items-center justify-center  ">
-                                            <button className='border  border-[#000000] w-[150px] h-[30px] text-[#000000] bg-[#E5E5E5] cursor-pointer ' >Choose options</button>
+                                            <Link to={`/detail/${item.id}`} className='border  border-[#000000] w-[150px] h-[30px] text-[#000000] bg-[#E5E5E5] cursor-pointer flex items-center justify-center ' >Choose options</Link>
                                         </div>
                                     </div>
-                                </Link>
+                                </div>
                             })
                         }
                     </div>

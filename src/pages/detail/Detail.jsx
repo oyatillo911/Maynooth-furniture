@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 function Detail({data}) {
@@ -6,6 +6,7 @@ function Detail({data}) {
   const filterInfo =data.find((item) =>{
     return item.id == id
   })
+  const [mainImg,setMainImg]=useState(filterInfo.img)
   return (
     <>
       <section>
@@ -16,21 +17,19 @@ function Detail({data}) {
           <div className="box flex items-start justify-between">
             <div className="logo flex flex-col gap-[20px] w-[730px]">
               <div className="main_img w-[730px] h-[408px]">
-                <img className='w-full h-full ' src={filterInfo.img} alt="" />
+                <img className='w-full h-full ' src={mainImg} alt="" />
               </div>
               <div className="multi flex items-center w-[730px] justify-between ">
-                <div className="multi_img h-[159px] w-[21%] cursor-pointer ">
-                  <img className='w-full h-full ' src={filterInfo.oneMulti} alt="" />
-                </div>
-                <div className="multi_img h-[159px] w-[21%] cursor-pointer ">
-                  <img className='w-full h-full ' src={filterInfo.twoMulti} alt="" />
-                </div>
-                <div className="multi_img h-[159px] w-[21%] cursor-pointer ">
-                  <img className='w-full h-full ' src={filterInfo.threeMulti} alt="" />
-                </div>
-                <div className="multi_img w-[21%] h-[159px] cursor-pointer ">
-                  <img className='w-full h-full ' src={filterInfo.fourMulti} alt="" />
-                </div>
+                {
+                  filterInfo.imgs.map((item) =>{
+                    return <div className="multi_img h-[159px] w-[21%] cursor-pointer"  onClick={()=>{
+                      setMainImg(item);
+                    }} >
+                    <img className='w-full h-full ' src={item} alt="" />
+                  </div>
+                  })
+                }
+               
               </div>
             </div>
             <div className="info w-[430px]">

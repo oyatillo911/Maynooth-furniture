@@ -2,11 +2,11 @@ import React from 'react'
 import Herohomesections from './Homesections/heroHome/Herohomesections'
 import Homesection from './Homesections/homesection/Homesection'
 
-function Home( {data}) {
+function Home( {data, setdata}) {
   return (
     <>
-    <Herohomesections/>
-    <Homesection data={data} />
+    <Herohomesections data={data}  setdata={setdata} />
+    <Homesection data={data}   />
     
     
     </>
