@@ -21,24 +21,24 @@ function Homesection({ data, setdata }) {
                                         </div>
                                         <h2 className='font-bold text-[16px] text-[#000000] ' >{item.desc}</h2>
                                         <div className="stars  py-[12px] flex items-center justify-between ">
-                                            
+
                                             <div className="div flex items-center gap-[2px]">
-                                            <div className="star flex items-center gap-0">
-                                                <img src="/imgs/one_stars.svg" alt="" />
-                                                <img src="/imgs/one_stars.svg" alt="" />
-                                                <img src="/imgs/one_stars.svg" alt="" />
-                                                <img src="/imgs/one_stars.svg" alt="" />
-                                                <img src="/imgs/one_stars_outline.svg" alt="" />
-                                            </div>
-                                            <span className='font-normal  text-[12px] text-[#535353]' >(267)</span>
+                                                <div className="star flex items-center gap-0">
+                                                    <img src="/imgs/one_stars.svg" alt="" />
+                                                    <img src="/imgs/one_stars.svg" alt="" />
+                                                    <img src="/imgs/one_stars.svg" alt="" />
+                                                    <img src="/imgs/one_stars.svg" alt="" />
+                                                    <img src="/imgs/one_stars_outline.svg" alt="" />
+                                                </div>
+                                                <span className='font-normal  text-[12px] text-[#535353]' >(267)</span>
                                             </div>
                                             <div className="div pb-[15px]">
-                                            <FaTrash  onClick={()=>{
-                                                const newData = data.filter((info)=>{
-                                                    return info.id !== item.id
-                                                })
-                                                setdata(newData)
-                                            }} className='cursor-pointer text-[16px] transition-all duration-300 ease-in-out hover:text-[red] ' />
+                                                <FaTrash onClick={() => {
+                                                    const newData = data.filter((info) => {
+                                                        return info.id !== item.id
+                                                    })
+                                                    setdata(newData)
+                                                }} className='cursor-pointer text-[16px] transition-all duration-300 ease-in-out hover:text-[red] ' />
 
                                             </div>
                                         </div>
